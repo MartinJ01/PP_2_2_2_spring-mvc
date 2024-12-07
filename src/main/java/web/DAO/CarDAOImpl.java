@@ -24,7 +24,7 @@ public class CarDAOImpl implements CarDAO {
             return cars;
         }
         return cars.stream()
-                .limit(cars.size() >= 5 ? cars.size() : count)
+                .limit(count >= 5 ? cars.size() : count)
                 .toList();
     }
 }
